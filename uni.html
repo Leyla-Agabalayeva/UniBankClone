@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unibank - Your Bank | Bank Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="uni.css">
+</head>
+<body>
+  <!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-links">
+      <a href="#">Xidmət şəbəkəsi</a>
+      <a href="#">Bank haqqında</a>
+      <a href="#">Tariflər</a>
+      <a href="#">Əlaqə</a>
+      <a href="#">F.A.Q</a>
+    </div>
+    <div class="topbar-lang">
+      <a href="#" class="active">AZ</a>
+      <a href="#">RU</a>
+      <a href="#">EN</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H15V15H9V21H4C3.45 21 3 20.55 3 20V9Z"/></svg>
+      </div>
+      <div class="logo-text">Uni<span>bank</span></div>
+    </a>
+    <div class="segment-tabs">
+      <button class="active" onclick="switchSegment('ferdi', this)">Fərdi</button>
+      <button onclick="switchSegment('biznes', this)">Biznes</button>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active" data-section="kartlar">Kartlar</a>
+      <a href="#" data-section="kreditler">Kreditlər</a>
+      <a href="#" data-section="emanetler">Əmanətlər</a>
+      <a href="#" data-section="kocurmeler">Köçürmələr</a>
+      <a href="#" data-section="onlayn">Onlayn xidmətlər</a>
+      <a href="#" data-section="kampaniyalar">Kampaniyalar</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:117" class="nav-phone">
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.46 11 19.79 19.79 0 01.5 2.38 2 2 0 012.48.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.72 6.72l1.79-1.79a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        117
+      </a>
+      <button class="burger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div style="margin-top:40px">
+    <a href="#" class="mobile-nav" style="display:block;padding:14px 0;font-size:16px;font-weight:600;color:#1A1A2E;text-decoration:none;border-bottom:1px solid #E0E0E0">Kartlar</a>
+    <a href="#" class="mobile-nav" style="display:block;padding:14px 0;font-size:16px;font-weight:600;color:#1A1A2E;text-decoration:none;border-bottom:1px solid #E0E0E0">Kreditlər</a>
+    <a href="#" class="mobile-nav" style="display:block;padding:14px 0;font-size:16px;font-weight:600;color:#1A1A2E;text-decoration:none;border-bottom:1px solid #E0E0E0">Əmanətlər</a>
+    <a href="#" class="mobile-nav" style="display:block;padding:14px 0;font-size:16px;font-weight:600;color:#1A1A2E;text-decoration:none;border-bottom:1px solid #E0E0E0">Köçürmələr</a>
+    <a href="#" class="mobile-nav" style="display:block;padding:14px 0;font-size:16px;font-weight:600;color:#1A1A2E;text-decoration:none;border-bottom:1px solid #E0E0E0">Onlayn xidmətlər</a>
+    <a href="#" class="mobile-nav" style="display:block;padding:14px 0;font-size:16px;font-weight:600;color:#1A1A2E;text-decoration:none;border-bottom:1px solid #E0E0E0">Kampaniyalar</a>
+    <div style="margin-top:20px;display:flex;gap:10px">
+      <button onclick="switchSegment('ferdi')" style="flex:1;padding:12px;border:1.5px solid #E31E24;background:#fff;color:#E31E24;border-radius:20px;font-weight:700;cursor:pointer;font-family:inherit">Fərdi</button>
+      <button onclick="switchSegment('biznes')" style="flex:1;padding:12px;border:1.5px solid #E31E24;background:#E31E24;color:#fff;border-radius:20px;font-weight:700;cursor:pointer;font-family:inherit">Biznes</button>
+    </div>
+    <a href="tel:117" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;padding:14px;background:#E31E24;color:#fff;border-radius:12px;text-decoration:none;font-weight:700;font-size:18px">📞 117</a>
+  </div>
+</div>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slides" id="slides">
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-badge">Kredit təklifi</div>
+        <h1>70 000 AZN-dək <strong>kredit</strong> alın!</h1>
+        <p>Arzuların üçün 70 000 AZN-dək nağd krediti illik cəmi 9%-dən başlayaraq və 60 aya qədər əldə edin.</p>
+        <div class="slide-btns">
+          <a href="#" class="btn btn-primary" onclick="showToast('Kredit sifarişi açıldı!')">Sifariş et</a>
+          <a href="#" class="btn btn-outline">Ətraflı</a>
+        </div>
+      </div>
+      <div class="slide-visual">
+        <div class="slide-card-mock">
+          <div class="mock-chip"></div>
+          <div class="mock-num">•••• •••• •••• 4521</div>
+          <div class="mock-row">
+            <div>
+              <div class="mock-label">Sahibi</div>
+              <div class="mock-value">AYAN MAMMADOVA</div>
+            </div>
+            <div class="mock-logo">U</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-badge">Keşbek proqramı</div>
+        <h1>Keşbek <strong>is back!</strong></h1>
+        <p>Unibank kartınla SOCAR, Bravo, Trendyol, kafe-restoran və digər kateqoriyalarda yüksək keşbek qazanın.</p>
+        <div class="slide-btns">
+          <a href="#" class="btn btn-primary" onclick="showToast('Keşbek proqramına baxılır!')">Ətraflı</a>
+          <a href="#" class="btn btn-outline">Şərtlər</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-badge">Əmanət məhsulu</div>
+        <h1>İllik <strong>10.5%-dək</strong> gəlir qazanın!</h1>
+        <p>Pulunuzu Unibank-a yatırın, yüksək gəlir qazanın. Əmanətiniz dövlət tərəfindən sığortalanır.</p>
+        <div class="slide-btns">
+          <a href="#" class="btn btn-primary" onclick="showToast('Əmanət məhsulları göstərilir!')">Sifariş et</a>
+          <a href="#" class="btn btn-outline">Ətraflı</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <div class="slide-badge">UCard — super kart</div>
+        <h1>Sənin kartın — <strong>UCard</strong></h1>
+        <p>30 000 AZN-dək faizsiz kredit xətti, 72 günə qədər güzəşt müddəti, çoxvalyutalı hesablar — hamısı bir kartda!</p>
+        <div class="slide-btns">
+          <a href="#" class="btn btn-primary" onclick="showToast('UCard sifarişi açıldı!')">Kart al</a>
+          <a href="#" class="btn btn-outline">Şərtlər</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-arrows">
+    <button class="arrow" onclick="changeSlide(-1)" aria-label="Əvvəlki">
+      <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+    </button>
+    <button class="arrow" onclick="changeSlide(1)" aria-label="Növbəti">
+      <svg viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
+    </button>
+  </div>
+
+  <div class="slider-nav" id="sliderDots">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+    <div class="dot" onclick="goToSlide(3)"></div>
+  </div>
+</section>
+
+<!-- QUICK STATS -->
+<div class="quick-stats">
+  <div class="stats-inner">
+    <div class="stat-item" onclick="showToast('Kredit məlumatlarına yönləndirilir...')">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg>
+      </div>
+      <div>
+        <div class="stat-num">9% <span>-dən</span></div>
+        <div class="stat-lbl">Nağd kredit faizi</div>
+      </div>
+    </div>
+    <div class="stat-item" onclick="showToast('Əmanət məlumatlarına yönləndirilir...')">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3L12 7 8 3"/></svg>
+      </div>
+      <div>
+        <div class="stat-num">10.5% <span>-dək</span></div>
+        <div class="stat-lbl">Əmanət gəliri</div>
+      </div>
+    </div>
+    <div class="stat-item" onclick="showToast('Kredit kartı məlumatlarına yönləndirilir...')">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      </div>
+      <div>
+        <div class="stat-num">72 <span>günə qədər</span></div>
+        <div class="stat-lbl">Kredit kartı güzəşt müddəti</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- SERVICES -->
+  <div class="section-header">
+    <h2 class="section-title">Bank <span>Xidmətləri</span></h2>
+    <a href="#" class="see-all">Hamısına bax <svg viewBox="0 0 24 24" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card" onclick="showToast('Kartlar bölməsinə yönləndirilirsiniz...')">
+      <div class="s-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+      <span>Kartlar</span>
+    </div>
+    <div class="service-card" onclick="showToast('Kreditlər bölməsinə yönləndirilirsiniz...')">
+      <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/></svg></div>
+      <span>Kreditlər</span>
+    </div>
+    <div class="service-card" onclick="showToast('Əmanətlər bölməsinə yönləndirilirsiniz...')">
+      <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h14a2 2 0 012 2v6a2 2 0 01-2 2zM19 10V7a7 7 0 00-14 0v3"/></svg></div>
+      <span>Əmanətlər</span>
+    </div>
+    <div class="service-card" onclick="showToast('Köçürmələr bölməsinə yönləndirilirsiniz...')">
+      <div class="s-icon"><svg viewBox="0 0 24 24"><polyline points="17,1 21,5 17,9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+      <span>Köçürmələr</span>
+    </div>
+    <div class="service-card" onclick="showToast('Onlayn xidmətlər bölməsinə yönləndirilirsiniz...')">
+      <div class="s-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+      <span>Onlayn xidmətlər</span>
+    </div>
+    <div class="service-card" onclick="showToast('Kampaniyalar bölməsinə yönləndirilirsiniz...')">
+      <div class="s-icon"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/></svg></div>
+      <span>Kampaniyalar</span>
+    </div>
+  </div>
+
+  <!-- PROMO CARDS -->
+  <div class="promo-grid">
+    <div class="promo-card pc1" onclick="showToast('Kredit sifarişi sayfasına yönləndirilir...')">
+      <div class="promo-card-pattern"></div>
+      <div class="promo-card-pattern2"></div>
+      <div class="promo-num">9%<small>-dən</small></div>
+      <div class="promo-lbl">İllik faizlə nağd kredit</div>
+      <div class="promo-cta">Sifariş et →</div>
+    </div>
+    <div class="promo-card pc2" onclick="showToast('Əmanət məhsullarına yönləndirilir...')">
+      <div class="promo-card-pattern"></div>
+      <div class="promo-card-pattern2"></div>
+      <div class="promo-num">10.5%<small>-dək</small></div>
+      <div class="promo-lbl">İllik əmanət gəliri</div>
+      <div class="promo-cta">Ətraflı →</div>
+    </div>
+    <div class="promo-card pc3" onclick="showToast('Kredit kartı məlumatlarına yönləndirilir...')">
+      <div class="promo-card-pattern"></div>
+      <div class="promo-card-pattern2"></div>
+      <div class="promo-num">72<small> gün</small></div>
+      <div class="promo-lbl">Güzəşt müddəti</div>
+      <div class="promo-cta">Kart al →</div>
+    </div>
+  </div>
+
+  <!-- CURRENCY + CALCULATOR -->
+  <div class="two-col">
+    <div class="currency-box">
+      <div class="currency-tabs">
+        <button class="ctab active" onclick="switchCurrTab('nagd', this)">Nağd</button>
+        <button class="ctab" onclick="switchCurrTab('nagdsiz', this)">Nağdsız</button>
+        <button class="ctab" onclick="switchCurrTab('kart', this)">Kart</button>
+      </div>
+      <div class="currency-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Valyuta</th>
+              <th>Alış</th>
+              <th>Satış</th>
+            </tr>
+          </thead>
+          <tbody id="currencyTableBody">
+          </tbody>
+        </table>
+      </div>
+      <div class="updated" id="rateUpdated">Yeniləndi: 26.05.2026 — 09:15</div>
+    </div>
+
+    <div class="calc-box">
+      <div class="calc-title">Valyuta kalkulyatoru</div>
+      <div class="calc-sub">Nağd məzənnə əsasında hesablanır</div>
+      <div class="calc-group">
+        <label>Məbləğ</label>
+        <div class="calc-row">
+          <input type="number" class="calc-input" id="calcFrom" value="100" oninput="calcConvert()">
+          <select class="calc-select" id="calcFromCurr" onchange="calcConvert()">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+            <option value="GBP">GBP</option>
+            <option value="AZN" selected>AZN</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;margin:4px 0">
+        <button class="calc-arrow" onclick="swapCalc()">
+          <svg viewBox="0 0 24 24"><polyline points="17,1 21,5 17,9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </button>
+      </div>
+      <div class="calc-group">
+        <label>Nəticə</label>
+        <div class="calc-row">
+          <input type="number" class="calc-input" id="calcTo" readonly>
+          <select class="calc-select" id="calcToCurr" onchange="calcConvert()">
+            <option value="USD" selected>USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+            <option value="GBP">GBP</option>
+            <option value="AZN">AZN</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="result-val" id="calcResultDisplay">-</div>
+        <div class="result-rate" id="calcRateDisplay">Məzənnə yüklənir...</div>
+      </div>
+      <button class="btn-calc" onclick="showToast('Valyuta mübadilə ofisləri göstərilir!')">Ən yaxın filial tap</button>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="section-header">
+    <h2 class="section-title">Son <span>Xəbərlər</span></h2>
+    <a href="#" class="see-all">Hamısına bax <svg viewBox="0 0 24 24" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></a>
+  </div>
+  <div class="news-grid">
+    <a href="#" class="news-card" onclick="showToast('Xəbər oxunur...');return false">
+      <div class="news-img ni1">
+        <div class="news-img-placeholder">🏦</div>
+        <div class="news-date">15.05.2026</div>
+      </div>
+      <div class="news-body">
+        <div class="news-tag">Bank xəbərləri</div>
+        <div class="news-title">Unibank beynəlxalq fonddan 20 milyon ABŞ dolları həcmində kredit cəlb edib</div>
+      </div>
+    </a>
+    <a href="#" class="news-card" onclick="showToast('Xəbər oxunur...');return false">
+      <div class="news-img ni2">
+        <div class="news-img-placeholder">📋</div>
+        <div class="news-date">28.04.2026</div>
+      </div>
+      <div class="news-body">
+        <div class="news-tag">Kampaniyalar</div>
+        <div class="news-title">3 gün, 0% komissiya: Unibank yeni kredit kampaniyası keçirir</div>
+      </div>
+    </a>
+    <a href="#" class="news-card" onclick="showToast('Xəbər oxunur...');return false">
+      <div class="news-img ni3">
+        <div class="news-img-placeholder">💳</div>
+        <div class="news-date">25.04.2026</div>
+      </div>
+      <div class="news-body">
+        <div class="news-tag">Kampaniyalar</div>
+        <div class="news-title">Unibankdan aprelin son şənbə aksiyası: 0% komissiyalı kredit!</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- APP SECTION -->
+  <div class="app-section">
+    <div class="app-text">
+      <h2>UBank — <span>Sənin Bankın</span> cibindədir!</h2>
+      <p>UBank 24/7 bank xidmətlərinə çıxışı smartfonunda təmin edən mobil tətbiqdir. Ödənişlərini banka gəlmədən, telefonunda bir toxunuşla həyata keçir!</p>
+      <div class="app-badges">
+        <a href="#" class="app-badge" onclick="showToast('App Store-a yönləndirilir...');return false">
+          <div class="app-badge-icon">🍎</div>
+          <div class="app-badge-text">
+            <span class="app-badge-sub">Yüklə</span>
+            <span class="app-badge-name">App Store</span>
+          </div>
+        </a>
+        <a href="#" class="app-badge" onclick="showToast('Google Play-ə yönləndirilir...');return false">
+          <div class="app-badge-icon">▶</div>
+          <div class="app-badge-text">
+            <span class="app-badge-sub">Yüklə</span>
+            <span class="app-badge-name">Google Play</span>
+          </div>
+        </a>
+        <a href="#" class="app-badge" onclick="showToast('AppGallery-yə yönləndirilir...');return false">
+          <div class="app-badge-icon">🌸</div>
+          <div class="app-badge-text">
+            <span class="app-badge-sub">Yüklə</span>
+            <span class="app-badge-name">AppGallery</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="app-phone-mock">
+      <div class="phone-header">
+        <span>UBank</span>
+        <span>9:41</span>
+      </div>
+      <div class="phone-balance">1 842.50 ₼</div>
+      <div class="phone-balance-sub">Əsas balans</div>
+      <div class="phone-actions">
+        <div class="phone-action"><div class="phone-action-icon">↑</div>Köçür</div>
+        <div class="phone-action"><div class="phone-action-icon">↓</div>Qəbul et</div>
+        <div class="phone-action"><div class="phone-action-icon">📱</div>Ödə</div>
+      </div>
+      <div class="phone-txn"><span>☕ Kafe</span><span class="txn-neg">-4.50 ₼</span></div>
+      <div class="phone-txn"><span>🛒 Bravo</span><span class="txn-neg">-23.80 ₼</span></div>
+      <div class="phone-txn"><span>💰 Maaş</span><span class="txn-pos">+1,200 ₼</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:32px;height:32px;background:#E31E24;border-radius:6px;display:flex;align-items:center;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H15V15H9V21H4C3.45 21 3 20.55 3 20V9Z"/></svg>
+          </div>
+          <span style="font-family:'Nunito',sans-serif;font-size:18px;font-weight:800;color:#fff">Unibank</span>
+        </div>
+        <p>Fərdi və korporativ müştərilər üçün geniş çeşidli bank xidmətləri və maliyyə həlləri. UBank mobil tətbiqi 7/24 xidmətinizdə!</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" title="Facebook">f</a>
+          <a href="#" class="social-btn" title="Instagram">in</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="LinkedIn">li</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Fərdi</h4>
+        <ul>
+          <li><a href="#">Kartlar</a></li>
+          <li><a href="#">Kreditlər</a></li>
+          <li><a href="#">Əmanətlər</a></li>
+          <li><a href="#">Köçürmələr</a></li>
+          <li><a href="#">Sığorta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Biznes</h4>
+        <ul>
+          <li><a href="#">Biznes Hesabı</a></li>
+          <li><a href="#">Biznes Kredit</a></li>
+          <li><a href="#">Əmək haqqı</a></li>
+          <li><a href="#">Akkreditiv</a></li>
+          <li><a href="#">Lizinq</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bank haqqında</h4>
+        <ul>
+          <li><a href="#">Haqqımızda</a></li>
+          <li><a href="#">Dayanıqlılıq</a></li>
+          <li><a href="#">Karyera</a></li>
+          <li><a href="#">Xəbərlər</a></li>
+          <li><a href="#">Hesabatlar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Əlaqə</h4>
+        <ul>
+          <li><a href="tel:117">📞 117 (Call-center)</a></li>
+          <li><a href="#">📍 Filiallar</a></li>
+          <li><a href="#">✉ info@unibank.az</a></li>
+          <li><a href="#">💬 Online chat</a></li>
+          <li><a href="#">F.A.Q</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Unibank. Bütün hüquqlar qorunur.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Məxfilik siyasəti</a>
+        <a href="#">İstifadə şərtləri</a>
+        <a href="#">Çərəzlər</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+    <script src="uni.js"></script>
+</body>
+</html>
